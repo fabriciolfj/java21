@@ -20,3 +20,40 @@ No código multithread estruturado, se uma tarefa for dividida em subtarefas sim
 todas elas retornarão ao mesmo lugar, ou seja, o bloco de código da tarefa. 
 Dessa forma, o tempo de vida de uma subtarefa simultânea fica confinado a esse bloco sintático.
 ```
+- existem alguns tipos de scopo, como:
+  - StructuredTaskScope.ShutdownOnFailure() -> desliga as outras threads, caso seu trabalha não tenha sido concluído, caso alguma falhe
+  - StructuredTaskScope.ShutdownOnSuccess() -> caso alguma thread retorne com sucesso (a primeira no caso), as demais são desligadas
+  - handleComplete() podemos também personalizar
+
+## HotSpot JVM 
+- é o mecanismo de tempo de execução desenvolvido pela Oracle. Ele traduz o bytecode Java em código de máquina para a arquitetura do processador do sistema operacional host.
+
+## JEP 439: ZGC Geracional
+```
+O Z Garbage Collector (ZGC) é um coletor de lixo escalável e de baixa latência. 
+Ele está disponível para uso em produção desde Java 15 e foi projetado para manter tempos de pausa consistentes e curtos, mesmo para heaps muito grandes. 
+Ele usa técnicas como gerenciamento e compactação de memória baseados em região para conseguir isso.
+Java 21 introduz uma extensão ao ZGC que mantém gerações separadas para objetos novos e antigos, 
+permitindo que o ZGC colete objetos jovens (que tendem a morrer jovens) com mais frequência. 
+Isso resultará em um ganho significativo de desempenho para aplicativos executados com ZGC geracional, 
+sem sacrificar nenhuma das propriedades valiosas pelas quais o coletor de lixo Z já é conhecido:
+  Os tempos de pausa não excedem 1 milissegundo;
+  Tamanhos de heap de algumas centenas de megabytes até muitos terabytes são suportados;
+  É necessária uma configuração manual mínima.
+A razão para lidar separadamente com objetos jovens e velhos decorre da hipótese geracional fraca , 
+afirmando que objetos jovens tendem a morrer jovens, enquanto objetos velhos tendem a permanecer por perto. 
+Isso significa que a coleta de objetos novos requer menos recursos e produz mais memória, enquanto a coleta de objetos antigos requer mais recursos e produz menos memória. 
+Esta é a razão pela qual podemos melhorar o desempenho de aplicações que utilizam ZGC coletando objetos jovens com mais frequência.
+O que há de diferente do Java 20?
+O coletor de lixo Z no Java 20 só era capaz de se comportar de maneira não geracional. Executá-lo exigiu a seguinte configuração de linha de comando:
+
+$ java -XX:+UseZGC ...
+
+Para executar sua carga de trabalho com o novo Generational ZGC em Java 21, use a seguinte configuração:
+
+$ java -XX:+UseZGC -XX:+ZGenerational ...
+
+Como você pode ver, o ZGC geracional foi introduzido junto com o ZGC não geracional. Em uma versão futura, 
+podemos esperar que o ZGC geracional se torne a configuração padrão para o coletor de lixo Z, 
+enquanto uma versão ainda posterior provavelmente removerá completamente o ZGC não geracional.
+```

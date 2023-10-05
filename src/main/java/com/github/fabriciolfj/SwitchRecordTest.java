@@ -11,9 +11,9 @@ public class SwitchRecordTest {
 
     public void print(Object o) {
         switch (o) {
-            case Point(int x, int y) 		-> System.out.printf("o is a position: %d/%d%n", x, y);
-            case String s               -> System.out.printf("o is a string: %s%n", s);
-            default                     -> System.out.printf("o is something else: %s%n", o);
+            case Point(int x, int y) 	    -> System.out.printf("o is a position: %d/%d%n", x, y);
+            case String s when !s.isEmpty() -> System.out.printf("o is a string: %s%n", s);
+            case null, default              -> System.out.printf("o is something else: %s%n", o);
         }
     }
 }
