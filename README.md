@@ -3,7 +3,7 @@
 ## threads virtuais
 - uma thread work (so) pode executar várias threads virtuais
 - as threads virtuais são gerenciadas pela jvm
-- as threads virtuais, quando ocorrem um bloqueio são desmontadas da thread transportador e o código executado aguarda. Quando ela torna-se dispoónivel, a thread transportador a restaura continuando o procedimento
+- as threads virtuais, quando ocorrem um bloqueio são desmontadas da thread transportador e o código executado aguarda. Quando ela torna-se disponivel, a thread transportador a restaura continuando o procedimento
 
 ### Alguns problemas com uso de threads virtuais
 - bibliotecas não adequadas para uso de threads virtuais
