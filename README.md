@@ -16,7 +16,7 @@ Se você estiver familiarizado com variáveis
 ThreadLocal , os valores com escopo definido são uma maneira moderna de compartilhar dados 
 dentro e entre threads . Os valores com escopo permitem que um valor (objeto) seja 
 armazenado por um tempo limitado, de forma que apenas o thread que escreveu o valor possa lê-lo.
-```
+``` 
 
 ## Structure concurrency
 ```
