@@ -67,3 +67,8 @@ Como você pode ver, o ZGC geracional foi introduzido junto com o ZGC não gerac
 podemos esperar que o ZGC geracional se torne a configuração padrão para o coletor de lixo Z, 
 enquanto uma versão ainda posterior provavelmente removerá completamente o ZGC não geracional.
 ```
+
+# Dicas java
+
+### compra compactar e desocompcatar bytes
+- use Deflater/Inflater
