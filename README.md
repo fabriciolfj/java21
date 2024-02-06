@@ -72,3 +72,31 @@ enquanto uma versão ainda posterior provavelmente removerá completamente o ZGC
 
 ### compra compactar e desocompcatar bytes
 - use Deflater/Inflater
+
+
+### priority queue
+```
+A `PriorityQueue` (Fila de Prioridade) é uma estrutura de dados que mantém uma coleção de elementos com prioridades associadas. A principal vantagem de uma `PriorityQueue` é que ela permite que os elementos sejam processados com base em sua prioridade, garantindo que o elemento com a maior ou menor prioridade seja o próximo a ser removido da fila.
+
+Aqui estão algumas vantagens e casos de uso comuns para `PriorityQueue`:
+
+1. **Eficiência na Inserção e Remoção:**
+   - A `PriorityQueue` é eficiente na inserção e remoção de elementos, especialmente quando comparada a outras estruturas de dados como listas ordenadas. A complexidade de tempo para inserção e remoção é geralmente O(log n), onde "n" é o número de elementos na fila.
+
+2. **Ordenação Automática:**
+   - A `PriorityQueue` mantém automaticamente os elementos em ordem com base em suas prioridades. Isso significa que você não precisa se preocupar com a ordenação manual da coleção sempre que um novo elemento é inserido ou um elemento é removido.
+
+3. **Algoritmos Baseados em Prioridade:**
+   - É útil em algoritmos que requerem processamento com base em prioridades, como algoritmos de busca de caminho mínimo (por exemplo, Dijkstra) e algoritmos de árvore de spanning mínima (por exemplo, Prim).
+
+4. **Solução para Problemas de Scheduling:**
+   - Pode ser utilizado em problemas de escalonamento, onde tarefas precisam ser executadas com base em suas prioridades ou prazos.
+
+5. **Implementação de Algoritmos de Huffman:**
+   - A `PriorityQueue` é frequentemente usada na implementação de algoritmos de compressão, como o algoritmo de Huffman, que é usado em compressão de dados.
+
+6. **Soluções para Problemas de Eventos com Prioridade:**
+   - Em simulações ou sistemas que lidam com eventos com diferentes prioridades, uma `PriorityQueue` pode ser usada para agendar e processar eventos de forma eficiente.
+
+Lembre-se de que a escolha de usar uma `PriorityQueue` dependerá das características específicas do problema que você está tentando resolver. Se a ordem de processamento com base em prioridades é crucial para o desempenho do seu algoritmo ou sistema, a `PriorityQueue` pode ser uma escolha eficiente e conveniente.
+```
