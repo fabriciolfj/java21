@@ -6,7 +6,7 @@ import com.github.fabriciolfj.pojo.PersonComparator;
 import java.util.Iterator;
 import java.util.PriorityQueue;
 
-//iterador percorre na ordem de nivel por nivel
+//iterador percorre na ordem de nivel por nivel, ou seja, não garante a ordem de prioridade
 //maior prioridade seria o menor valo, maior valor seria de prioridade mais baixa
 
 /**
