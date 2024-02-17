@@ -11,7 +11,6 @@ import java.util.Iterator;
 
 public class FindFileDirectorieAndSubDirectories {
 
-
     public Iterator<File> find(Path startPath, String extension) {
         if (!extension.startsWith(".")) {
             extension = STR.".\{extension}";
