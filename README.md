@@ -107,3 +107,12 @@ Lembre-se de que a escolha de usar uma `PriorityQueue` dependerá das caracterí
 
 - semaphore utilizado para dar permissão a recursos para as threads, concedendo licenças e retirando-as. E mais dinâmico que o countDownLatch, no entanto
 - há uma sobrecarga de processamento no processo de concessão.
+
+
+### Coleções sequenciadas
+- Uma coleção sequenciada é essencialmente uma coleção com uma ordem de encontro definida. Cada elemento desta coleção possui uma posição bem definida – primeiro,
+- segundo e assim por diante, até o último elemento.
+- Os principais recursos incluem:
+ - Um método reversed() para fornecer uma visão ordenada inversa da coleção. 
+ - Métodos para adicionar, obter e remover elementos em ambas as extremidades da coleção.
+ - não há elementos duplicados
