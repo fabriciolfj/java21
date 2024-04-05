@@ -100,3 +100,19 @@ Aqui estão algumas vantagens e casos de uso comuns para `PriorityQueue`:
 
 Lembre-se de que a escolha de usar uma `PriorityQueue` dependerá das características específicas do problema que você está tentando resolver. Se a ordem de processamento com base em prioridades é crucial para o desempenho do seu algoritmo ou sistema, a `PriorityQueue` pode ser uma escolha eficiente e conveniente.
 ```
+
+### uso countDownLatch e Semaphore
+- countDownLatch e um decrementador, onde ele vai decrementando ate chegar a 0. Utilizado para aguardar as outras threads concluirem suas operações, onde cada
+- thread executada, decrementa o valor do mesmo. A thread principal chama o await, ate que o decrementador chegue a 0.
+
+- semaphore utilizado para dar permissão a recursos para as threads, concedendo licenças e retirando-as. E mais dinâmico que o countDownLatch, no entanto
+- há uma sobrecarga de processamento no processo de concessão.
+
+
+### Coleções sequenciadas
+- Uma coleção sequenciada é essencialmente uma coleção com uma ordem de encontro definida. Cada elemento desta coleção possui uma posição bem definida – primeiro,
+- segundo e assim por diante, até o último elemento.
+- Os principais recursos incluem:
+ - Um método reversed() para fornecer uma visão ordenada inversa da coleção. 
+ - Métodos para adicionar, obter e remover elementos em ambas as extremidades da coleção.
+ - não há elementos duplicados
