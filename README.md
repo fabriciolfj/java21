@@ -7,8 +7,8 @@
 
 ### Alguns problemas com uso de threads virtuais
 - bibliotecas não adequadas para uso de threads virtuais
-- fixação, a thread executou algum código nativo e não pode ser armazenado no headp, ou seja, não consegui ser desmontada da thead transportadora, impedindo que esta execute outras threads
-- monopolização, quando a thread virtual executa um procedimento muito long
+- fixação, a thread executou algum código nativo e não pode ser armazenado no heap, ou seja, não consegui ser desmontada da thead transportadora, impedindo que esta execute outras threads
+- monopolização, quando a thread virtual executa um procedimento muito longo
 
 ## scoped value
 ```
@@ -22,8 +22,8 @@ armazenado por um tempo limitado, de forma que apenas o thread que escreveu o va
 ```
 O recurso de simultaneidade estruturada visa simplificar os programas simultâneos Java, 
 tratando múltiplas tarefas executadas em threads diferentes (bifurcadas do mesmo thread pai) 
-como uma única unidade de trabalho. Tratar todos esses threads filhos como uma única unidade 
-ajudará no gerenciamento de todos os threads como uma unidade; assim, o cancelamento e o 
+como uma única unidade de trabalho. Tratar todas essas threads filhas como uma única unidade 
+ajudará no gerenciamento; assim o cancelamento ou
 tratamento de erros podem ser feitos de forma mais confiável.
 
 No código multithread estruturado, se uma tarefa for dividida em subtarefas simultâneas, 
@@ -31,7 +31,7 @@ todas elas retornarão ao mesmo lugar, ou seja, o bloco de código da tarefa.
 Dessa forma, o tempo de vida de uma subtarefa simultânea fica confinado a esse bloco sintático.
 ```
 - existem alguns tipos de scopo, como:
-  - StructuredTaskScope.ShutdownOnFailure() -> desliga as outras threads, caso seu trabalha não tenha sido concluído, caso alguma falhe
+  - StructuredTaskScope.ShutdownOnFailure() -> desliga as outras threads, caso seu trabalho não tenha sido concluído, caso alguma falhe
   - StructuredTaskScope.ShutdownOnSuccess() -> caso alguma thread retorne com sucesso (a primeira no caso), as demais são desligadas
   - handleComplete() podemos também personalizar
 
@@ -51,7 +51,7 @@ sem sacrificar nenhuma das propriedades valiosas pelas quais o coletor de lixo Z
   Tamanhos de heap de algumas centenas de megabytes até muitos terabytes são suportados;
   É necessária uma configuração manual mínima.
 A razão para lidar separadamente com objetos jovens e velhos decorre da hipótese geracional fraca , 
-afirmando que objetos jovens tendem a morrer jovens, enquanto objetos velhos tendem a permanecer por perto. 
+afirmando que objetos jovens tendem a morrer jovens, enquanto objetos velhos tendem a permanecer por mais tempo. 
 Isso significa que a coleta de objetos novos requer menos recursos e produz mais memória, enquanto a coleta de objetos antigos requer mais recursos e produz menos memória. 
 Esta é a razão pela qual podemos melhorar o desempenho de aplicações que utilizam ZGC coletando objetos jovens com mais frequência.
 O que há de diferente do Java 20?
