@@ -13,6 +13,7 @@ public class StructuredConcurrencyTest {
             Future<DemographicData> userDetailsFuture = scope.fork(() -> fetchUserDetails(id));
 
             scope.join();	// Join all subtasks
+            scope.join().result();	// encerra as demais threads, caso algumas deles de sucesso
             scope.throwIfFailed(e -> new WebApplicationException(e));
 
             //The subtasks have completed by now so process the result
