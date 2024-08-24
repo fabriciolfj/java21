@@ -1,11 +1,11 @@
 package com.github.fabriciolfj.vector;
 
-import jdk.incubator.vector.FloatVector;
-import jdk.incubator.vector.VectorSpecies;
+//import jdk.incubator.vector.FloatVector;
+//import jdk.incubator.vector.VectorSpecies;
 
 public class Example {
 
-    void scalarComputation(float[] a, float[] b, float[] c) {
+    /*void scalarComputation(float[] a, float[] b, float[] c) {
         for (int i = 0; i < a.length; i++) {
             c[i] = (a[i] * a[i] + b[i] * b[i]) * -1.0f;
         }
@@ -28,5 +28,5 @@ public class Example {
         for (; i < a.length; i++) {
             c[i] = (a[i] * a[i] + b[i] * b[i]) * -1.0f;
         }
-    }
+    }*/
 }
