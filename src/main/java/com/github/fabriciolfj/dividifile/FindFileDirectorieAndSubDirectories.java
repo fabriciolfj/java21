@@ -8,6 +8,8 @@ import java.io.File;
 import java.nio.file.Path;
 import java.util.Iterator;
 
+import static java.lang.StringTemplate.STR;
+
 
 public class FindFileDirectorieAndSubDirectories {
 

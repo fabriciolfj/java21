@@ -1,5 +1,6 @@
 package com.github.fabriciolfj.vector;
 
+/*
 import jdk.incubator.vector.FloatVector;
 import jdk.incubator.vector.VectorSpecies;
 
@@ -29,4 +30,4 @@ public class Example {
             c[i] = (a[i] * a[i] + b[i] * b[i]) * -1.0f;
         }
     }
-}
+}*/
