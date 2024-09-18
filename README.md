@@ -70,7 +70,7 @@ enquanto uma versão ainda posterior provavelmente removerá completamente o ZGC
 
 # Dicas java
 
-### compra compactar e desocompcatar bytes
+### compactar e desocompcatar bytes
 - use Deflater/Inflater
 
 
