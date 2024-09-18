@@ -10,7 +10,7 @@
 - fixação, a thread executou algum código nativo e não pode ser armazenado no heap, ou seja, não consegui ser desmontada da thead transportadora, impedindo que esta execute outras threads
 - monopolização, quando a thread virtual executa um procedimento muito longo
 
-## scoped value (subsctitudo para threadlocal em threasvirtuais)
+## scoped value (substituto para threadlocal em threasvirtuais)
 ```
 Se você estiver familiarizado com variáveis 
 ThreadLocal , os valores com escopo definido são uma maneira moderna de compartilhar dados 
