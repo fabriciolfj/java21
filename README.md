@@ -120,3 +120,7 @@ Lembre-se de que a escolha de usar uma `PriorityQueue` dependerá das caracterí
 ### strictfp
 - A partir do Java 17, todas as operações de ponto flutuante obedecem às regras do IEEE 754 por padrão, graças à implementação do JEP 306 (Restore Always-Strict Floating-Point Semantics).
 - Antes do Java 17, o `strictfp` era necessário para garantir resultados consistentes e previsíveis em cálculos de ponto flutuante, independentemente da arquitetura do processador.
+
+### absExact
+- quando um valor negativo, ao deixa-lo absoluto (positivo usando Math.abs) não cabe em um int, o Math.abs mostra um valor enganoso
+- devemos usar o Math.absExact, que nessa situação lançaria uma exception ArithmeticException
