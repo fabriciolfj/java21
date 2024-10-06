@@ -124,3 +124,13 @@ Lembre-se de que a escolha de usar uma `PriorityQueue` dependerá das caracterí
 ### absExact
 - quando um valor negativo, ao deixa-lo absoluto (positivo usando Math.abs) não cabe em um int, o Math.abs mostra um valor enganoso
 - devemos usar o Math.absExact, que nessa situação lançaria uma exception ArithmeticException
+
+
+# Diferença entre assinatura digital e processo de criptografia assimétrica
+```
+As assinaturas digitais garantem a autenticidade e integridade de uma mensagem. 
+Certificam que a mensagem foi enviada pelo remetente legítimo (autenticidade) e não sofreu alterações (integridade).
+
+A criptografia garante a confidencialidade de uma mensagem.
+Somente o destinatário desejado (que possui a chave privada correspondente) pode decriptar e ler a mensagem.
+```
