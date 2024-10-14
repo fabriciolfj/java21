@@ -10,7 +10,7 @@
 - fixação, a thread executou algum código nativo e não pode ser armazenado no heap, ou seja, não consegui ser desmontada da thead transportadora, impedindo que esta execute outras threads
 - monopolização, quando a thread virtual executa um procedimento muito longo
 
-## scoped value (subsctitudo para threadlocal em threasvirtuais)
+## scoped value (substituto para threadlocal em threasvirtuais)
 ```
 Se você estiver familiarizado com variáveis 
 ThreadLocal , os valores com escopo definido são uma maneira moderna de compartilhar dados 
@@ -70,7 +70,7 @@ enquanto uma versão ainda posterior provavelmente removerá completamente o ZGC
 
 # Dicas java
 
-### compra compactar e desocompcatar bytes
+### compactar e desocompcatar bytes
 - use Deflater/Inflater
 
 
@@ -116,3 +116,21 @@ Lembre-se de que a escolha de usar uma `PriorityQueue` dependerá das caracterí
  - Um método reversed() para fornecer uma visão ordenada inversa da coleção. 
  - Métodos para adicionar, obter e remover elementos em ambas as extremidades da coleção.
  - não há elementos duplicados
+
+### strictfp
+- A partir do Java 17, todas as operações de ponto flutuante obedecem às regras do IEEE 754 por padrão, graças à implementação do JEP 306 (Restore Always-Strict Floating-Point Semantics).
+- Antes do Java 17, o `strictfp` era necessário para garantir resultados consistentes e previsíveis em cálculos de ponto flutuante, independentemente da arquitetura do processador.
+
+### absExact
+- quando um valor negativo, ao deixa-lo absoluto (positivo usando Math.abs) não cabe em um int, o Math.abs mostra um valor enganoso
+- devemos usar o Math.absExact, que nessa situação lançaria uma exception ArithmeticException
+
+
+# Diferença entre assinatura digital e processo de criptografia assimétrica
+```
+As assinaturas digitais garantem a autenticidade e integridade de uma mensagem. 
+Certificam que a mensagem foi enviada pelo remetente legítimo (autenticidade) e não sofreu alterações (integridade).
+
+A criptografia garante a confidencialidade de uma mensagem.
+Somente o destinatário desejado (que possui a chave privada correspondente) pode decriptar e ler a mensagem.
+```
