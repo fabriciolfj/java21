@@ -10,14 +10,14 @@ public class Main {
     static class Ibuprofen extends Pill {}
     static class Piafen extends Pill {}    
 
+    //patter all branch
     private static String headache(Pill o) {
 
         return switch(o) {                       
             case Nurofen nurofen -> "Get Nurofen ...";                                    
             case Ibuprofen ibuprofen -> "Get Ibuprofen ...";                     
             case Piafen piafen -> "Get Piafen ...";                          
-                
-            default -> "Sorry, we cannot solve your headache!";
+            case Pill p -> "Get Pill ...";
         };                       
     }
 
