@@ -2,6 +2,17 @@ package com.github.fabriciolfj;
 
 import java.util.concurrent.ArrayBlockingQueue;
 
+/**
+ * O termo "fracamente consistente" significa que:
+ *
+ * Pode ou não refletir modificações feitas após sua criação
+ * Não lança ConcurrentModificationException
+ * É projetado para ambientes concorrentes onde consistência absoluta não é necessária
+ * O comportamento pode variar entre execuções
+ *
+ * Este é um comportamento específico de coleções concorrentes como ArrayBlockingQueue, diferente de coleções não-concorrentes como ArrayList que lançariam uma ConcurrentModificationException neste caso.
+ * */
+
 public class ArrayQueueTest {
 
     //fracamente consistente
