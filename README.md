@@ -1,5 +1,35 @@
 # Java 21
 
+## reactive
+- como criar um correlation usando reactor
+```
+Mono<Void> handleRequest() {
+  long correlationId = correlationId();
+  log("Assembling the chain", correlationId);
+
+  Mono.just("test-product")
+    .delayElement(Duration.ofMillis(1))
+    .flatMap(product ->
+      Flux.concat(addProduct(product), notifyShop(product))
+          .then())
+    .contextWrite(Context.of("CORRELATION_ID", correlationId));
+
+Mono<Void> addProduct(String productName) {
+  return Mono.deferContextual(ctx -> {
+    log("Adding product: " + productName, ctx.get("CORRELATION_ID"));
+    return Mono.empty(); // Assume we’re actually storing the product
+  });
+}
+
+Mono<Boolean> notifyShop(String productName) {
+  return Mono.deferContextual(ctx -> {
+    log("Notifying shop about: " + productName,
+      ctx.get("CORRELATION_ID"));
+    return Mono.just(true);
+  });
+}
+```
+
 ## threads virtuais
 - uma thread work (so) pode executar várias threads virtuais
 - as threads virtuais são gerenciadas pela jvm
