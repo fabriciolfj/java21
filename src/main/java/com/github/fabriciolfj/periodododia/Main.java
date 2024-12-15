@@ -45,17 +45,17 @@ public class Main {
         System.out.println("America/Resolute: "
                 + DateConverters.toDayPeriodV2(new Date(), ZoneId.of("America/Resolute")));
         
-        System.out.println();
+        System.out.println(); */
         
         //  America/Argentina/Buenos_Aires
-        System.out.println("Good "
+        /*System.out.println("Good "
                 + DateConverters.toDayPeriodV1(new Date(), ZoneId.of("America/Argentina/Buenos_Aires"))
-                + ", America/Argentina/Buenos_Aires");
+                + ", America/Argentina/Buenos_Aires");*/
         System.out.println("America/Argentina/Buenos_Aires: "
-                + DateConverters.toDayPeriodV2(new Date(), ZoneId.of("America/Argentina/Buenos_Aires")));*/
+                + DateConverters.toDayPeriodV2(new Date(), ZoneId.of("America/Argentina/Buenos_Aires")));
         
         // print hour-by-hour
-        System.out.println();
-        DateConverters.printToDayPeriod();
+        //System.out.println();
+        //DateConverters.printToDayPeriod();
     }
 }

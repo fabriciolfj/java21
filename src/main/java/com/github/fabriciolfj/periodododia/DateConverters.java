@@ -46,10 +46,6 @@ public final class DateConverters {
 
         ZonedDateTime zdt = date.toInstant().atZone(zoneId);
 
-        DateTimeFormatter formatter1 = DateTimeFormatter.ofPattern("yyyy-MMM-dd'T'HH:mm:ss a Z");
-
-        System.out.println("Date-time to format as day period is: "
-                + zdt.withZoneSameInstant(zoneId).format(formatter1));
 
         DateTimeFormatter formatter2 = DateTimeFormatter.ofPattern("yyyy-MMM-dd [B]");
 
