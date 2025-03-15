@@ -5,8 +5,8 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 // Importações para a API de Scope Values
-import jdk.incubator.concurrent.ScopeLocal;
-import jdk.incubator.concurrent.StructuredTaskScope;
+//import jdk.incubator.concurrent.ScopeLocal;
+//import jdk.incubator.concurrent.StructuredTaskScope;
 
 /**
  * Exemplo de uso de Scope Values em Java (a partir do Java 21)
@@ -16,6 +16,7 @@ import jdk.incubator.concurrent.StructuredTaskScope;
  * 2. Habilitar o módulo incubador: --add-modules jdk.incubator.concurrent
  * 3. Habilitar o preview: --enable-preview
  */
+/*
 public class ScopeValuesExample {
 
     // Definição dos ScopeValues que queremos usar em nossa aplicação
@@ -107,4 +108,4 @@ public class ScopeValuesExample {
             }
         });
     }
-}
+}*/
