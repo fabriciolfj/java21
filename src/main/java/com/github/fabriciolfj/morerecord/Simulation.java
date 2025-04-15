@@ -19,15 +19,11 @@ public class Simulation {
     }
 
     private static String cabinetSwitch(Staff staff) {
-        switch (staff) {
-            case Doctor(var name, var specialy) -> {
-                 return STR."Cabinet of \{specialy}. Doctor: \{name}";
-            }
-            case Resident(var name, var dr) when (dr.specialy().equals("Allergy") || dr.specialy().equals("test") ) -> {
-                return STR."Cabinet of \{dr.specialy()}. Doctor: \{dr.name()}, Resident: \{name}";
-            } default -> {
-                return "";
-            }
-        }
+        return switch (staff) {
+            case Doctor(var name, var specialy) -> STR."Cabinet of \{specialy}. Doctor: \{name}";
+            case Resident(var name, var dr) when (dr.specialy().equals("Allergy") || dr.specialy().equals("test")) ->
+                    STR."Cabinet of \{dr.specialy()}. Doctor: \{dr.name()}, Resident: \{name}";
+            default -> "";
+        };
     }
 }
