@@ -8,6 +8,12 @@ public class Simulation {
         var result = cabinetSwitch(resident);
 
         System.out.println(result);
+
+        var doctor = new Doctor("teste", "nao sei");
+
+        result = cabinetSwitch(doctor);
+
+        System.out.println(result);
     }
 
     private static String cabinet(Staff staff) {
@@ -20,7 +26,7 @@ public class Simulation {
 
     private static String cabinetSwitch(Staff staff) {
         return switch (staff) {
-            case Doctor(var name, var specialy) -> STR."Cabinet of \{specialy}. Doctor: \{name}";
+            case Doctor(_, var specialy) -> STR."Cabinet of \{specialy}. Doctor: ??";
             case Resident(var name, var dr) when (dr.specialy().equals("Allergy") || dr.specialy().equals("test")) ->
                     STR."Cabinet of \{dr.specialy()}. Doctor: \{dr.name()}, Resident: \{name}";
             default -> "";
