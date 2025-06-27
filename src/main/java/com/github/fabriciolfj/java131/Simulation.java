@@ -12,5 +12,11 @@ public class Simulation {
         final Melon melonDeser = (Melon) Melon.bytesToObject(melonSer);
 
         System.out.println(melonDeser);
+
+        var base64 = Melon.objectToString(melon);
+        System.out.println(base64);
+
+        var result = Melon.stringToObject(base64);
+        System.out.println(result);
     }
 }
