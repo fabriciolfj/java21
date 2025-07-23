@@ -166,4 +166,5 @@ Somente o destinatário desejado (que possui a chave privada correspondente) pod
 ```
 
 # Resumo das collections
-https://claude.ai/public/artifacts/244643db-4469-4fd9-929a-e14ebd1ce076
+![Análise das Collections Java]([https://i.imgur.com/exemplo.png](https://claude.ai/public/artifacts/244643db-4469-4fd9-929a-e14ebd1ce076))
+
