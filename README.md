@@ -164,3 +164,7 @@ Certificam que a mensagem foi enviada pelo remetente legítimo (autenticidade) e
 A criptografia garante a confidencialidade de uma mensagem.
 Somente o destinatário desejado (que possui a chave privada correspondente) pode decriptar e ler a mensagem.
 ```
+
+# Resumo das collections
+![Análise das Collections Java]([https://i.imgur.com/exemplo.png](https://claude.ai/public/artifacts/244643db-4469-4fd9-929a-e14ebd1ce076))
+
