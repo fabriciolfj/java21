@@ -1,4 +1,6 @@
-package com.github.fabriciolfj.jep456;
+package com.github.fabriciolfj.ball;
+
+import com.github.fabriciolfj.jep456.Ball;
 
 public non-sealed class RedBall extends Ball {
 
