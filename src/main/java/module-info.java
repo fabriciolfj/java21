@@ -1,4 +1,4 @@
-module project_jdk21 {
+module project_jdk21cap {
     requires com.fasterxml.jackson.databind;
     requires java.desktop;
     requires java.logging;

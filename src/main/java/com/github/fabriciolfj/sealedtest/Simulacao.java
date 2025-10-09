@@ -1,4 +1,4 @@
-package com.github.fabriciolfj.sealeds;
+package com.github.fabriciolfj.sealedtest;
 
 import java.util.Arrays;
 import java.util.List;
