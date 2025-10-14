@@ -1,12 +1,13 @@
 package com.github.fabriciolfj.reflectionselead.modern.challenge;
 
-import com.refinery.fuel.Coke;
-import com.refinery.fuel.Fuel;
-import com.refinery.fuel.Methane;
-import com.refinery.fuel.SolidFuel;
-import modern.reflection.Inspector;
+import com.github.fabriciolfj.reflectionselead.fuel.Coke;
+import com.github.fabriciolfj.reflectionselead.modern.reflection.Inspector;
 
-public class Main {    
+import com.github.fabriciolfj.reflectionselead.fuel.Fuel;
+import com.github.fabriciolfj.reflectionselead.fuel.Methane;
+import com.github.fabriciolfj.reflectionselead.fuel.SolidFuel;
+
+public class Main {
 
     public static void main(String[] args) {
         
