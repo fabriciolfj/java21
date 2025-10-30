@@ -5,4 +5,5 @@ module project_jdk21cap {
     requires java.sql;
     requires org.apache.commons.io;
     requires org.apache.commons.lang3;
+    requires org.slf4j;
 }
